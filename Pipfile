@@ -9,6 +9,7 @@ verify_ssl = true
 django = "*"
 channels = "*"
 flake8 = "*"
+channels-redis = "*"
 
 [requires]
 python_version = "3.6"

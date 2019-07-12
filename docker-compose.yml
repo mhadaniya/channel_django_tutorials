@@ -1,6 +1,10 @@
 version: '3.6'
 
-services:  
+services:
+  redis:
+     image: redis:2.8
+     ports:
+      - 6379:6379
   app:
     build: 
       context: .
@@ -9,3 +13,5 @@ services:
     volumes:
       - ./app:/app
     command: python manage.py runserver 0.0.0.0:8000
+    depends_on: 
+      - redis
