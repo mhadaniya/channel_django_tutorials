@@ -9,7 +9,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 # Setup directory structure
 RUN mkdir /app
 WORKDIR /app
-COPY ./myapp/ /app
+COPY ./app/ /app
 
 # Install dependencies
 RUN pip install pipenv
